@@ -1,0 +1,14 @@
+{
+    "httpStatusCode": {
+        "success": 200,
+        "created": 201,
+        "noContent": 204,
+        "badRequest": 400,
+        "unAuthorixe": 401,
+        "notFound": 404,
+        "conflict": 409,
+        "locked": 423,
+        "serverError": 500,
+        "serviceUnavilable": 503
+    }
+}
