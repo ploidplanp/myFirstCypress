@@ -38,4 +38,10 @@ describe('My First Test Suite', function () {
             // console.log(loadData)
         })
     })
+
+    it('Load Data by Environment', () => {
+        cy.fixture('example.json').then(loadData => {
+            cy.log(loadData)
+        })
+    })
 })
