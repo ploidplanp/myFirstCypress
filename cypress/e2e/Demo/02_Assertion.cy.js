@@ -63,4 +63,10 @@ describe('Assertion', function () {
         // or
         expect(data).to.include.all.key(Object.keys(expected_json))
     })
+
+    it.only('Test ENV', () => {
+        cy.fixture('example.json').then(data => {
+            cy.log(data.name)
+        })
+    });
 })

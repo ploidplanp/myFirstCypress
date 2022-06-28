@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "run_cypress": "cypress run",
-    "open_cypress": "cypress open"
+    "open_cypress": "cypress open",
+    "open_cypress_sit": "cypress open --config-file cypress_sit.config.js",
+    "open_cypress_uat": "cypress open --config-file cypress_uat.config.js"
   },
   "author": "",
   "license": "ISC",
