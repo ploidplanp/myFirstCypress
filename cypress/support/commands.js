@@ -23,3 +23,15 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('pgDB', (query, connection) => {
+    var sqlConnection = Cypress.env('db')
+    if (connection && connection != '')
+        sqlConnection = connection
+    cy.task(
+        'pgDB', {
+        "query": query,
+        "connection": sqlConnection
+    }).as('resp').should(resp => { })
+    return cy.get('@response')
+})
